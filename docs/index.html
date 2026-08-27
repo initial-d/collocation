@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>一种解决英语动名词搭配错误的模型</title>
+  <meta name="description" content="A 2016 Computer Science paper on correcting English verb-noun collocation errors using collocation similarity, classification, and language-model ranking.">
+
+  <meta name="citation_title" content="一种解决英语动名词搭配错误的模型">
+  <meta name="citation_author" content="杜一民">
+  <meta name="citation_author" content="吴桂兴">
+  <meta name="citation_author" content="吴敏">
+  <meta name="citation_publication_date" content="2016/07">
+  <meta name="citation_journal_title" content="计算机科学">
+  <meta name="citation_volume" content="43">
+  <meta name="citation_issue" content="7">
+  <meta name="citation_firstpage" content="230">
+  <meta name="citation_lastpage" content="233">
+  <meta name="citation_doi" content="10.11896/j.issn.1002-137X.2016.07.041">
+  <meta name="citation_pdf_url" content="https://initial-d.github.io/collocation/papers/model-to-solve-english-verb-noun-collocation-errors.pdf">
+  <meta name="citation_abstract_html_url" content="https://initial-d.github.io/collocation/">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="一种解决英语动名词搭配错误的模型">
+  <meta property="og:description" content="Model to Solve English Verb-Noun Collocation Errors. 计算机科学, 2016, 43(7): 230-233.">
+  <meta property="og:url" content="https://initial-d.github.io/collocation/">
+  <link rel="canonical" href="https://initial-d.github.io/collocation/">
+  <link rel="alternate" type="application/pdf" href="https://initial-d.github.io/collocation/papers/model-to-solve-english-verb-noun-collocation-errors.pdf">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "一种解决英语动名词搭配错误的模型",
+    "alternativeHeadline": "Model to Solve English Verb-Noun Collocation Errors",
+    "author": [
+      {"@type": "Person", "name": "杜一民", "alternateName": "Yimin Du"},
+      {"@type": "Person", "name": "吴桂兴", "alternateName": "Guixing Wu"},
+      {"@type": "Person", "name": "吴敏", "alternateName": "Min Wu"}
+    ],
+    "datePublished": "2016-07",
+    "isPartOf": {
+      "@type": "Periodical",
+      "name": "计算机科学"
+    },
+    "volumeNumber": "43",
+    "issueNumber": "7",
+    "pageStart": "230",
+    "pageEnd": "233",
+    "doi": "10.11896/j.issn.1002-137X.2016.07.041",
+    "url": "https://initial-d.github.io/collocation/",
+    "encoding": {
+      "@type": "MediaObject",
+      "contentUrl": "https://initial-d.github.io/collocation/papers/model-to-solve-english-verb-noun-collocation-errors.pdf",
+      "encodingFormat": "application/pdf"
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1f2933;
+      --muted: #5d6875;
+      --line: #d8dee6;
+      --paper: #ffffff;
+      --accent: #1f6feb;
+      --soft: #f5f7fa;
+    }
+    body {
+      margin: 0;
+      background: var(--soft);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", "Noto Sans CJK SC", "Microsoft YaHei", Arial, sans-serif;
+      line-height: 1.65;
+    }
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 24px 64px;
+      background: var(--paper);
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
+    h1 {
+      font-size: clamp(30px, 5vw, 44px);
+      line-height: 1.18;
+      margin: 0 0 12px;
+      letter-spacing: 0;
+    }
+    h2 {
+      font-size: 22px;
+      margin: 36px 0 12px;
+    }
+    .subtitle {
+      color: var(--muted);
+      font-size: 18px;
+      margin: 0 0 28px;
+    }
+    .metadata {
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      gap: 8px 20px;
+      padding: 18px 0;
+      margin: 24px 0;
+    }
+    .metadata dt {
+      color: var(--muted);
+      font-weight: 600;
+    }
+    .metadata dd {
+      margin: 0;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 28px 0 34px;
+    }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0 16px;
+      border: 1px solid var(--accent);
+      border-radius: 6px;
+      color: #fff;
+      background: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .button.secondary {
+      color: var(--accent);
+      background: #fff;
+    }
+    .abstract {
+      font-size: 17px;
+    }
+    code {
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      background: #eef2f7;
+      padding: 2px 5px;
+      border-radius: 4px;
+    }
+    footer {
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      margin-top: 42px;
+      padding-top: 18px;
+      font-size: 14px;
+    }
+    @media (max-width: 620px) {
+      main {
+        padding: 32px 18px 48px;
+      }
+      .metadata {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+      .metadata dt {
+        margin-top: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <article>
+      <h1>一种解决英语动名词搭配错误的模型</h1>
+      <p class="subtitle">Model to Solve English Verb-Noun Collocation Errors</p>
+
+      <dl class="metadata">
+        <dt>Authors</dt>
+        <dd>杜一民 (Yimin Du), 吴桂兴 (Guixing Wu), 吴敏 (Min Wu)</dd>
+        <dt>Journal</dt>
+        <dd>计算机科学, 2016, 43(7): 230-233</dd>
+        <dt>DOI</dt>
+        <dd><a href="https://doi.org/10.11896/j.issn.1002-137X.2016.07.041">10.11896/j.issn.1002-137X.2016.07.041</a></dd>
+        <dt>Repository</dt>
+        <dd><a href="https://github.com/initial-d/collocation">initial-d/collocation</a></dd>
+      </dl>
+
+      <div class="actions">
+        <a class="button" href="papers/model-to-solve-english-verb-noun-collocation-errors.pdf">Download searchable PDF</a>
+        <a class="button secondary" href="https://github.com/initial-d/collocation">View source repository</a>
+      </div>
+
+      <h2>摘要</h2>
+      <p class="abstract">
+        英语学习者易犯动名词搭配错误。通过分析 CLEC 中的动名词搭配错误, 本文提出一种纠正中国学习者动名词搭配错误的模型。首先构建了一个动名词搭配库, 接着提出了一种度量搭配间相似度的方法, 通过计算目标搭配和搭配库的相似度得到粗略的相似搭配集。随后使用分类方法过滤掉相似搭配集中不能将测试句划为正确类的搭配, 得到候选结果集, 最后使用语言模型对候选结果集打分排序, 得到最终的纠正建议。在使用 BNC 构造的测试集上, 这种综合相似性推理和上下文特征的方法对动名词搭配纠错具有显著效果。
+      </p>
+
+      <h2>Abstract</h2>
+      <p class="abstract">
+        English learners often make mistakes about verb-noun collocations. Through the analysis of verb-noun collocation errors in CLEC, this paper proposes a model to correct these mistakes made by Chinese learners. A verb-noun collocation library is built first, then a similarity measure is used to retrieve a coarse set of similar collocations. Classification filters candidates that do not fit the sentence context, and a language model ranks the remaining correction suggestions. Experiments on test data constructed from the BNC corpus show that combining similarity inference and contextual features is effective for correcting verb-noun collocation errors.
+      </p>
+
+      <h2>Citation</h2>
+      <p>
+        杜一民, 吴桂兴, 吴敏. 一种解决英语动名词搭配错误的模型. 计算机科学, 2016, 43(7): 230-233. DOI: <code>10.11896/j.issn.1002-137X.2016.07.041</code>
+      </p>
+    </article>
+    <footer>
+      This page provides a stable, crawlable landing page and a direct PDF link for academic indexing.
+    </footer>
+  </main>
+</body>
+</html>

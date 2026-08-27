@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://initial-d.github.io/collocation/sitemap.xml
