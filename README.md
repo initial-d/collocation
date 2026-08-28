@@ -14,3 +14,4 @@ DOI: `10.11896/j.issn.1002-137X.2016.07.041`
 
 - Scholar-friendly landing page: https://initial-d.github.io/collocation/
 - Searchable PDF: https://initial-d.github.io/collocation/papers/model-to-solve-english-verb-noun-collocation-errors.pdf
+- Citation metadata: [CITATION.cff](CITATION.cff) and [CITATION.bib](CITATION.bib)
