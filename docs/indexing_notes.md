@@ -24,9 +24,11 @@ identify without changing the original paper content.
 - The page also exposes Dublin Core title, creator, date, identifier, and
   language tags.
 - The structured data uses `schema.org/ScholarlyArticle` with authors, DOI,
-  journal, issue, pages, language, canonical URL, and PDF encoding.
+  journal, issue, pages, language, canonical URL, DBLP record, citation text,
+  and PDF encoding.
+- The landing page links directly to hosted BibTeX and CFF files.
 - `robots.txt` allows crawling and points to `sitemap.xml`.
-- `sitemap.xml` lists the landing page and PDF.
+- `sitemap.xml` lists the landing page, PDF, BibTeX file, and CFF file.
 
 ## Maintenance checklist
 
@@ -38,6 +40,8 @@ identify without changing the original paper content.
   Chinese title and authors as selectable text.
 - If the publisher URL changes, update both the visible DOI link and structured
   metadata.
+- If a stable article record appears in another scholarly index, add it as a
+  visible bibliography link only after confirming it resolves reliably.
 - Do not add private notes, internal paths, access tokens, or unpublished data
   to the landing page or PDF.
 
@@ -45,3 +49,5 @@ identify without changing the original paper content.
 
 - 2026-09-02: landing page metadata, sitemap, robots setup, PDF hash, and
   first-page extractable title/authors reviewed.
+- 2026-09-15: added hosted BibTeX/CFF files, a DBLP record link, refreshed the
+  sitemap, and strengthened bilingual search metadata.

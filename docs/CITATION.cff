@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite the original Computer Science paper."
+title: "一种解决英语动名词搭配错误的模型"
+authors:
+  - family-names: "Du"
+    given-names: "Yimin"
+  - family-names: "Wu"
+    given-names: "Guixing"
+  - family-names: "Wu"
+    given-names: "Min"
+doi: "10.11896/j.issn.1002-137X.2016.07.041"
+date-published: 2016-07
+url: "https://initial-d.github.io/collocation/"
+preferred-citation:
+  type: article
+  title: "一种解决英语动名词搭配错误的模型"
+  authors:
+    - family-names: "Du"
+      given-names: "Yimin"
+    - family-names: "Wu"
+      given-names: "Guixing"
+    - family-names: "Wu"
+      given-names: "Min"
+  journal: "计算机科学"
+  volume: "43"
+  issue: "7"
+  start: 230
+  end: 233
+  year: 2016
+  doi: "10.11896/j.issn.1002-137X.2016.07.041"
