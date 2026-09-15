@@ -17,7 +17,10 @@ identify without changing the original paper content.
 
 - The PDF URL ends in `.pdf` and is linked from the landing page.
 - The current PDF SHA256 is
-  `A5CD00984D86751FCBE5B4E73B5028AFB31DA7FE26DDF05C23601651B2ED8EC3`.
+  `E4D94E827008D346EE71127323C6C72392A81AE187AE30E2AD9C983396F5D41D`.
+- The PDF is under 5 MB and its first page begins with a clean, extractable
+  bibliographic text layer for title, authors, journal, pages, DOI, and
+  keywords.
 - The landing page exposes Highwire-style `citation_*` tags for title,
   authors, publication date, journal, ISSN, volume, issue, pages, DOI, language,
   keywords, PDF URL, and abstract URL.
@@ -51,3 +54,6 @@ identify without changing the original paper content.
   first-page extractable title/authors reviewed.
 - 2026-09-15: added hosted BibTeX/CFF files, a DBLP record link, refreshed the
   sitemap, and strengthened bilingual search metadata.
+- 2026-09-15: corrected the first-page PDF indexing text layer while preserving
+  the original page image, then verified PDF metadata, size, text extraction,
+  and first-page rendering.
