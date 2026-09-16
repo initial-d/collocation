@@ -1,0 +1,49 @@
+{
+  "title": "一种解决英语动名词搭配错误的模型",
+  "upload_type": "publication",
+  "publication_type": "article",
+  "description": "Stable archival record for the 2016 Computer Science paper \"一种解决英语动名词搭配错误的模型\" / \"Model to Solve English Verb-Noun Collocation Errors\". The paper studies English verb-noun collocation error correction using collocation similarity, classification, and language-model ranking.",
+  "creators": [
+    {
+      "name": "Du, Yimin",
+      "affiliation": "University of Science and Technology of China"
+    },
+    {
+      "name": "Wu, Guixing",
+      "affiliation": "University of Science and Technology of China"
+    },
+    {
+      "name": "Wu, Min",
+      "affiliation": "University of Science and Technology of China"
+    }
+  ],
+  "publication_date": "2016-07",
+  "keywords": [
+    "verb-noun collocation errors",
+    "grammatical error correction",
+    "collocation similarity",
+    "language model",
+    "natural language processing",
+    "计算机科学",
+    "动名词搭配错误"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.11896/j.issn.1002-137X.2016.07.041",
+      "relation": "isIdenticalTo",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "https://initial-d.github.io/collocation/",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://dblp.org/rec/journals/jsjkx/DuWW16",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ],
+  "language": "zho",
+  "access_right": "open"
+}

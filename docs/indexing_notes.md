@@ -30,6 +30,8 @@ identify without changing the original paper content.
   journal, issue, pages, language, canonical URL, DBLP record, citation text,
   and PDF encoding.
 - The landing page links directly to hosted BibTeX and CFF files.
+- `.zenodo.json` and `docs/scholarly_deposit_metadata.md` keep repository,
+  Zenodo, OSF, ResearchGate, and institutional repository metadata aligned.
 - `robots.txt` allows crawling and points to `sitemap.xml`.
 - `sitemap.xml` lists the landing page, PDF, BibTeX file, and CFF file.
 
@@ -57,3 +59,5 @@ identify without changing the original paper content.
 - 2026-09-15: corrected the first-page PDF indexing text layer while preserving
   the original page image, then verified PDF metadata, size, text extraction,
   and first-page rendering.
+- 2026-09-16: added Zenodo-ready repository metadata and a reusable scholarly
+  deposit metadata checklist for third-party academic repositories.
