@@ -33,7 +33,7 @@ identify without changing the original paper content.
 - `.zenodo.json` and `docs/scholarly_deposit_metadata.md` keep repository,
   Zenodo, OSF, ResearchGate, and institutional repository metadata aligned.
 - `robots.txt` allows crawling and points to `sitemap.xml`.
-- `sitemap.xml` lists the landing page, PDF, BibTeX file, and CFF file.
+- `sitemap.xml` lists the landing page and PDF.
 - `docs/google0ef880f8ffde0761.html` verifies the URL-prefix property in
   Google Search Console.
 
@@ -65,3 +65,5 @@ identify without changing the original paper content.
   deposit metadata checklist for third-party academic repositories.
 - 2026-09-16: added the Google Search Console HTML verification file for the
   `https://initial-d.github.io/collocation/` URL-prefix property.
+- 2026-09-16: simplified `sitemap.xml` to only the paper landing page and PDF
+  before resubmitting it in Google Search Console.
